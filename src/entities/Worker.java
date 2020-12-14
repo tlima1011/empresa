@@ -71,8 +71,16 @@ public class Worker {
 
 	@Override
 	public String toString() {
-		return "Worker [name=" + name + ", level=" + level + ", baseSalary=" + baseSalary + ", department=" + department
-				+ ", contracts=" + contracts + "]";
+		StringBuilder sb = new StringBuilder(); 
+		sb.append("Worker \n");
+		sb.append("Name = " +name +"\n");
+		sb.append("Level = " +level+"\n");
+		sb.append("Base Salary $" +baseSalary+"\n");
+		sb.append("Department: " + department + "\n");
+		for (HourContract contract : contracts) {
+			sb.append(contract + "\n");
+		}
+		return sb.toString();
 	}
 	
 	public double income(int month, int year) {

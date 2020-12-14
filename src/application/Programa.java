@@ -48,6 +48,7 @@ public class Programa {
 			worker.addContract(contract);
 		}
 		sc.nextLine();
+		
 		System.out.print("Enter month and year to calculate income (MM/YYYY): ");//08/2018
 		String income = sc.nextLine(); 
 		int month = Integer.parseInt(income.substring(0, 2));
@@ -56,6 +57,7 @@ public class Programa {
 		System.out.println("Name: " +worker.getName()); //Alex
 		System.out.println("Department: " +department); //Design
 		System.out.println("Income for " +income + ": " +String.format("%.2f", worker.income(month, year))); //08/2018: 3000.00
+		System.out.println(worker);
 		sc.close();
 	}
 }

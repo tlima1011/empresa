@@ -75,7 +75,7 @@ public class Worker {
 		sb.append("Worker \n");
 		sb.append("Name = " +name +"\n");
 		sb.append("Level = " +level+"\n");
-		sb.append("Base Salary $" +baseSalary+"\n");
+		sb.append("Base Salary $" +String.format("%.2f", baseSalary)+"\n");
 		sb.append("Department: " + department + "\n");
 		for (HourContract contract : contracts) {
 			sb.append(contract + "\n");

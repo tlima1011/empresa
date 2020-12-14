@@ -22,8 +22,7 @@ public class Programa {
 				
 		System.out.print("Enter department's name: "); //Design
 		String department = sc.nextLine(); 
-		Department dep = new Department(department);
-		
+				
 		System.out.println("Enter worker data:");
 		System.out.print("Name: ");//Alex
 		String name = sc.nextLine(); 
@@ -31,7 +30,7 @@ public class Programa {
 		String level = sc.nextLine(); 
 		System.out.print("Base salary: "); //1200.00
 		Double baseSalary = sc.nextDouble(); 
-		Worker worker = new Worker(name, WorkerLevel.valueOf(level), baseSalary, dep);
+		Worker worker = new Worker(name, WorkerLevel.valueOf(level), baseSalary, new Department(department));
 		//System.out.println(worker);
 		
 		System.out.print("How many contracts to this worker? "); //3
@@ -48,7 +47,6 @@ public class Programa {
 			worker.addContract(contract);
 		}
 		sc.nextLine();
-		
 		System.out.print("Enter month and year to calculate income (MM/YYYY): ");//08/2018
 		String income = sc.nextLine(); 
 		int month = Integer.parseInt(income.substring(0, 2));
